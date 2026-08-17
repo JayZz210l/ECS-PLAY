@@ -1,0 +1,16 @@
+{
+    "name": "CitizenSim",
+    "rootNamespace": "CitizenSim",
+    "references": [
+        "Unity.Entities",
+        "Unity.Burst",
+        "Unity.Mathematics",
+        "Unity.Collections",
+        "UnityEngine.UI",
+        "Unity.Behavior",
+        "Unity.InputSystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "autoReferenced": true
+}

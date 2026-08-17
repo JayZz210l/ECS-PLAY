@@ -1,0 +1,1203 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2849564750536911901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db920e62f70f420bb33c771449926fa4, type: 3}
+  m_Name: CitizenBehavior2
+  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraph
+  Graphs:
+  - rid: 5229531665127440394
+  m_DebugInfo: {fileID: 7847099178043054344}
+  m_WasCompileWithPlaceholderNode: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 5229531665127440394
+      type: {class: BehaviorGraphModule, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        AuthoringAssetID:
+          m_Value0: 2627202108132266990
+          m_Value1: 3161901895455060504
+        m_DebugInfo: {fileID: 7847099178043054344}
+        BlackboardReference:
+          rid: 5229531665127440395
+        BlackboardGroupReferences: []
+        Root:
+          rid: 8331858578113823090
+        m_VersionTimestamp: 639220637417312520
+    - rid: 5229531665127440395
+      type: {class: BlackboardReference, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        m_Blackboard:
+          rid: 5229531665127440397
+        m_Source: {fileID: 4991551357545470339}
+    - rid: 5229531665127440397
+      type: {class: Blackboard, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        m_Variables:
+        - rid: 8331858578113823092
+    - rid: 8331858578113823090
+      type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 8178668965290514606
+          m_Value1: 9117833652125753999
+        Graph:
+          rid: 5229531665127440394
+        m_Parent:
+          rid: -2
+        m_Child:
+          rid: 8331858578113823091
+        Repeat: 1
+        AllowMultipleRepeatsPerTick: 0
+    - rid: 8331858578113823091
+      type: {class: BranchingConditionComposite, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 13570049225683613505
+          m_Value1: 4028852852038353161
+        Graph:
+          rid: 5229531665127440394
+        m_Parent:
+          rid: 8331858578113823090
+        m_Children:
+        - rid: 8331858578113823093
+        - rid: 8331858578113823094
+        m_RegisteredObservers: []
+        m_Conditions:
+        - rid: 8331858578113823095
+        m_RequiresAllConditions: 0
+        True:
+          rid: 8331858578113823093
+        False:
+          rid: 8331858578113823094
+        m_CurrentChild:
+          rid: -2
+        m_ObserverType: 0
+    - rid: 8331858578113823092
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        m_Value: {fileID: 0}
+    - rid: 8331858578113823093
+      type: {class: FleeAction, ns: CitizenSim, asm: CitizenSim}
+      data:
+        ID:
+          m_Value0: 12962598429782121791
+          m_Value1: 5191889232996600842
+        Graph:
+          rid: 5229531665127440394
+        m_Parent:
+          rid: 8331858578113823091
+    - rid: 8331858578113823094
+      type: {class: BranchingConditionComposite, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 14091656357827557162
+          m_Value1: 10789293723745652760
+        Graph:
+          rid: 5229531665127440394
+        m_Parent:
+          rid: 8331858578113823091
+        m_Children:
+        - rid: 8331858578113823096
+        - rid: 8331858578113823097
+        m_RegisteredObservers: []
+        m_Conditions:
+        - rid: 8331858578113823098
+        m_RequiresAllConditions: 0
+        True:
+          rid: 8331858578113823096
+        False:
+          rid: 8331858578113823097
+        m_CurrentChild:
+          rid: -2
+        m_ObserverType: 0
+    - rid: 8331858578113823095
+      type: {class: IsThreatenedCondition, ns: CitizenSim, asm: CitizenSim}
+      data:
+        Graph:
+          rid: 5229531665127440394
+    - rid: 8331858578113823096
+      type: {class: SeekFoodAction, ns: CitizenSim, asm: CitizenSim}
+      data:
+        ID:
+          m_Value0: 11370472729849116460
+          m_Value1: 16758953500302965479
+        Graph:
+          rid: 5229531665127440394
+        m_Parent:
+          rid: 8331858578113823094
+    - rid: 8331858578113823097
+      type: {class: BranchingConditionComposite, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 17134546650062930692
+          m_Value1: 10339480107832761979
+        Graph:
+          rid: 5229531665127440394
+        m_Parent:
+          rid: 8331858578113823094
+        m_Children:
+        - rid: 8331858578113823099
+        - rid: 8331858578113823100
+        m_RegisteredObservers: []
+        m_Conditions:
+        - rid: 8331858578113823101
+        m_RequiresAllConditions: 0
+        True:
+          rid: 8331858578113823099
+        False:
+          rid: 8331858578113823100
+        m_CurrentChild:
+          rid: -2
+        m_ObserverType: 0
+    - rid: 8331858578113823098
+      type: {class: IsHungryCondition, ns: CitizenSim, asm: CitizenSim}
+      data:
+        Graph:
+          rid: 5229531665127440394
+    - rid: 8331858578113823099
+      type: {class: SeekHomeAction, ns: CitizenSim, asm: CitizenSim}
+      data:
+        ID:
+          m_Value0: 15155549619655612222
+          m_Value1: 219054863445627147
+        Graph:
+          rid: 5229531665127440394
+        m_Parent:
+          rid: 8331858578113823097
+    - rid: 8331858578113823100
+      type: {class: BranchingConditionComposite, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 16523817292806414852
+          m_Value1: 12224643109823000632
+        Graph:
+          rid: 5229531665127440394
+        m_Parent:
+          rid: 8331858578113823097
+        m_Children:
+        - rid: 8331858578113823102
+        - rid: 8331858578113823103
+        m_RegisteredObservers: []
+        m_Conditions:
+        - rid: 8331858578113823104
+        m_RequiresAllConditions: 0
+        True:
+          rid: 8331858578113823102
+        False:
+          rid: 8331858578113823103
+        m_CurrentChild:
+          rid: -2
+        m_ObserverType: 0
+    - rid: 8331858578113823101
+      type: {class: IsFatiguedCondition, ns: CitizenSim, asm: CitizenSim}
+      data:
+        Graph:
+          rid: 5229531665127440394
+    - rid: 8331858578113823102
+      type: {class: SeekFunAction, ns: CitizenSim, asm: CitizenSim}
+      data:
+        ID:
+          m_Value0: 18098816165614121370
+          m_Value1: 3879000099078280848
+        Graph:
+          rid: 5229531665127440394
+        m_Parent:
+          rid: 8331858578113823100
+    - rid: 8331858578113823103
+      type: {class: WanderAction, ns: CitizenSim, asm: CitizenSim}
+      data:
+        ID:
+          m_Value0: 16413840592244385954
+          m_Value1: 355021810744730529
+        Graph:
+          rid: 5229531665127440394
+        m_Parent:
+          rid: 8331858578113823100
+    - rid: 8331858578113823104
+      type: {class: IsBoredCondition, ns: CitizenSim, asm: CitizenSim}
+      data:
+        Graph:
+          rid: 5229531665127440394
+--- !u!114 &-570537392519276034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd922ae02c94c87a66e46a10a7319b9, type: 3}
+  m_Name: CitizenBehavior2 Blackboard
+  m_EditorClassIdentifier: Unity.Behavior.Authoring::Unity.Behavior.BehaviorBlackboardAuthoringAsset
+  AssetID:
+    m_Value0: 2627202108132266990
+    m_Value1: 3161901895455060504
+  m_Variables:
+  - rid: 5229531665127440399
+  m_VersionTimestamp: 639198386606499738
+  m_CommandBuffer:
+    m_Commands: []
+  m_RuntimeBlackboardAsset: {fileID: 4991551357545470339}
+  references:
+    version: 2
+    RefIds:
+    - rid: 5229531665127440399
+      type: {class: 'TypedVariableModel`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad8f2220607dac4db5082ff333fafb8, type: 3}
+  m_Name: CitizenBehavior2
+  m_EditorClassIdentifier: Unity.Behavior.Authoring::Unity.Behavior.BehaviorAuthoringGraph
+  Blackboard: {fileID: -570537392519276034}
+  m_Description: 
+  m_Nodes:
+  - rid: 5229531665127440400
+  - rid: 8331858578113822911
+  - rid: 8331858578113822912
+  - rid: 8331858578113822913
+  - rid: 8331858578113822930
+  - rid: 8331858578113822938
+  - rid: 8331858578113822939
+  - rid: 8331858578113822940
+  - rid: 8331858578113822961
+  - rid: 8331858578113822972
+  - rid: 8331858578113822973
+  - rid: 8331858578113822974
+  - rid: 8331858578113823001
+  - rid: 8331858578113823015
+  - rid: 8331858578113823016
+  - rid: 8331858578113823017
+  - rid: 8331858578113823050
+  - rid: 8331858578113823067
+  m_VersionTimestamp: 639220637417312520
+  m_SerializedVersion: 3
+  m_DebugInfo: {fileID: 7847099178043054344}
+  m_RuntimeGraph: {fileID: -2849564750536911901}
+  AssetID:
+    m_Value0: 2627202108132266990
+    m_Value1: 3161901895455060504
+  Story:
+    Story: 
+    StoryVariableNames: []
+    Variables: []
+  m_NodeModelsInfo:
+  - Name: On Start
+    Story: 
+    RuntimeTypeString: Unity.Behavior.Start, Unity.Behavior, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    RuntimeTypeID:
+      m_Value0: 3335272451348827663
+      m_Value1: 11549843281177505721
+    Variables: []
+    NamedChildren: []
+    IsPlaceholder: 0
+  - Name: Conditional Branch
+    Story: 
+    RuntimeTypeString: Unity.Behavior.BranchingConditionComposite, Unity.Behavior,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    RuntimeTypeID:
+      m_Value0: 12334964803190848789
+      m_Value1: 14608808926743427008
+    Variables: []
+    NamedChildren:
+    - True
+    - False
+    IsPlaceholder: 0
+  - Name: Flee
+    Story: flee from threat
+    RuntimeTypeString: CitizenSim.FleeAction, CitizenSim, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    RuntimeTypeID:
+      m_Value0: 11024999611375677183
+      m_Value1: 1234605616436508552
+    Variables: []
+    NamedChildren: []
+    IsPlaceholder: 0
+  - Name: Seek Food
+    Story: seek the nearest food
+    RuntimeTypeString: CitizenSim.SeekFoodAction, CitizenSim, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    RuntimeTypeID:
+      m_Value0: 9964204167558050465
+      m_Value1: 7807916014193937563
+    Variables: []
+    NamedChildren: []
+    IsPlaceholder: 0
+  - Name: Seek Home
+    Story: go home to rest
+    RuntimeTypeString: CitizenSim.SeekHomeAction, CitizenSim, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    RuntimeTypeID:
+      m_Value0: 15114284481868391892
+      m_Value1: 18007880358491911138
+    Variables: []
+    NamedChildren: []
+    IsPlaceholder: 0
+  - Name: Seek Fun
+    Story: go play at a fun point
+    RuntimeTypeString: CitizenSim.SeekFunAction, CitizenSim, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    RuntimeTypeID:
+      m_Value0: 16344056426329011941
+      m_Value1: 11599558328718828787
+    Variables: []
+    NamedChildren: []
+    IsPlaceholder: 0
+  - Name: Wander
+    Story: wander to a random nearby point
+    RuntimeTypeString: CitizenSim.WanderAction, CitizenSim, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    RuntimeTypeID:
+      m_Value0: 13378021818847511474
+      m_Value1: 15548314483614208448
+    Variables: []
+    NamedChildren: []
+    IsPlaceholder: 0
+  m_Blackboards: []
+  m_MainBlackboardAuthoringAsset: {fileID: -570537392519276034}
+  m_CommandBuffer:
+    m_Commands: []
+  m_SubgraphsInfo: []
+  m_BlackboardMissingManagedRef: 0
+  m_GraphMissingManagedRef: 0
+  m_HasMissingTypeInManagedRef: 0
+  m_EnumDependencyCache:
+    Entries: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 5229531665127440400
+      type: {class: StartNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -4.087816, y: 72.21809}
+        ID:
+          m_Value0: 8178668965290514606
+          m_Value1: 9117833652125753999
+        Parents: []
+        PortModels:
+        - rid: 5229531665127440401
+        NodeType:
+          m_SerializableType: Unity.Behavior.Start, Unity.Behavior, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 3335272451348827663
+          m_Value1: 11549843281177505721
+        m_FieldValues: []
+        Repeat: 1
+        AllowMultipleRepeatsPerTick: 0
+    - rid: 5229531665127440401
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 5229531665127440400
+        m_Connections:
+        - rid: 8331858578113822918
+    - rid: 8331858578113822911
+      type: {class: FloatingPortNodeModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        Position: {x: -100.20003, y: 269.9}
+        ID:
+          m_Value0: 16992917507881317932
+          m_Value1: 7717740603493546833
+        Parents: []
+        PortModels:
+        - rid: 8331858578113822914
+        - rid: 8331858578113822915
+        ParentNodeID:
+          m_Value0: 13570049225683613505
+          m_Value1: 4028852852038353161
+        PortName: True
+        Metadata: 
+    - rid: 8331858578113822912
+      type: {class: FloatingPortNodeModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        Position: {x: 91.79997, y: 269.9}
+        ID:
+          m_Value0: 7116725994636404379
+          m_Value1: 15967321220082044648
+        Parents: []
+        PortModels:
+        - rid: 8331858578113822916
+        - rid: 8331858578113822917
+        ParentNodeID:
+          m_Value0: 13570049225683613505
+          m_Value1: 4028852852038353161
+        PortName: False
+        Metadata: 
+    - rid: 8331858578113822913
+      type: {class: BranchingConditionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -4.2000265, y: 166.9}
+        ID:
+          m_Value0: 13570049225683613505
+          m_Value1: 4028852852038353161
+        Parents: []
+        PortModels:
+        - rid: 8331858578113822918
+        - rid: 8331858578113822919
+        - rid: 8331858578113822920
+        NodeType:
+          m_SerializableType: Unity.Behavior.BranchingConditionComposite, Unity.Behavior,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 12334964803190848789
+          m_Value1: 14608808926743427008
+        m_FieldValues: []
+        <ConditionModels>k__BackingField:
+        - ConditionType:
+            m_SerializableType: CitizenSim.IsThreatenedCondition, CitizenSim, Version=0.0.0.0,
+              Culture=neutral, PublicKeyToken=null
+          ConditionTypeID:
+            m_Value0: 9833440827789222417
+            m_Value1: 18441921395520307353
+          NodeModel:
+            rid: 8331858578113822913
+          m_FieldValues: []
+          OperatorFieldModel:
+            rid: -2
+        <RequiresAllConditionsTrue>k__BackingField: 0
+        <ShouldTruncateNodeUI>k__BackingField: 0
+        <ObserverType>k__BackingField: 0
+    - rid: 8331858578113822914
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 1
+        m_NodeModel:
+          rid: 8331858578113822911
+        m_Connections:
+        - rid: 8331858578113822919
+    - rid: 8331858578113822915
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113822911
+        m_Connections:
+        - rid: 8331858578113822931
+    - rid: 8331858578113822916
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 1
+        m_NodeModel:
+          rid: 8331858578113822912
+        m_Connections:
+        - rid: 8331858578113822920
+    - rid: 8331858578113822917
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113822912
+        m_Connections:
+        - rid: 8331858578113822945
+    - rid: 8331858578113822918
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113822913
+        m_Connections:
+        - rid: 5229531665127440401
+    - rid: 8331858578113822919
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: True
+        m_PortDataFlowType: 1
+        m_IsFloating: 1
+        m_NodeModel:
+          rid: 8331858578113822913
+        m_Connections:
+        - rid: 8331858578113822914
+    - rid: 8331858578113822920
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: False
+        m_PortDataFlowType: 1
+        m_IsFloating: 1
+        m_NodeModel:
+          rid: 8331858578113822913
+        m_Connections:
+        - rid: 8331858578113822916
+    - rid: 8331858578113822930
+      type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -271.40027, y: 406.09967}
+        ID:
+          m_Value0: 12962598429782121791
+          m_Value1: 5191889232996600842
+        Parents: []
+        PortModels:
+        - rid: 8331858578113822931
+        - rid: 8331858578113822932
+        NodeType:
+          m_SerializableType: CitizenSim.FleeAction, CitizenSim, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 11024999611375677183
+          m_Value1: 1234605616436508552
+        m_FieldValues: []
+    - rid: 8331858578113822931
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113822930
+        m_Connections:
+        - rid: 8331858578113822915
+    - rid: 8331858578113822932
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113822930
+        m_Connections: []
+    - rid: 8331858578113822938
+      type: {class: FloatingPortNodeModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        Position: {x: 127.79999, y: 574.69995}
+        ID:
+          m_Value0: 15464261684314600047
+          m_Value1: 596400016295283294
+        Parents: []
+        PortModels:
+        - rid: 8331858578113822941
+        - rid: 8331858578113822942
+        ParentNodeID:
+          m_Value0: 14091656357827557162
+          m_Value1: 10789293723745652760
+        PortName: True
+        Metadata: 
+    - rid: 8331858578113822939
+      type: {class: FloatingPortNodeModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        Position: {x: 319.8, y: 574.69995}
+        ID:
+          m_Value0: 12580878317971589814
+          m_Value1: 18045357439051690400
+        Parents: []
+        PortModels:
+        - rid: 8331858578113822943
+        - rid: 8331858578113822944
+        ParentNodeID:
+          m_Value0: 14091656357827557162
+          m_Value1: 10789293723745652760
+        PortName: False
+        Metadata: 
+    - rid: 8331858578113822940
+      type: {class: BranchingConditionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: 223.79999, y: 471.69998}
+        ID:
+          m_Value0: 14091656357827557162
+          m_Value1: 10789293723745652760
+        Parents: []
+        PortModels:
+        - rid: 8331858578113822945
+        - rid: 8331858578113822946
+        - rid: 8331858578113822947
+        NodeType:
+          m_SerializableType: Unity.Behavior.BranchingConditionComposite, Unity.Behavior,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 12334964803190848789
+          m_Value1: 14608808926743427008
+        m_FieldValues: []
+        <ConditionModels>k__BackingField:
+        - ConditionType:
+            m_SerializableType: CitizenSim.IsHungryCondition, CitizenSim, Version=0.0.0.0,
+              Culture=neutral, PublicKeyToken=null
+          ConditionTypeID:
+            m_Value0: 13887315953012036803
+            m_Value1: 16778097420250899153
+          NodeModel:
+            rid: 8331858578113822940
+          m_FieldValues: []
+          OperatorFieldModel:
+            rid: -2
+        <RequiresAllConditionsTrue>k__BackingField: 0
+        <ShouldTruncateNodeUI>k__BackingField: 0
+        <ObserverType>k__BackingField: 0
+    - rid: 8331858578113822941
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 1
+        m_NodeModel:
+          rid: 8331858578113822938
+        m_Connections:
+        - rid: 8331858578113822946
+    - rid: 8331858578113822942
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113822938
+        m_Connections:
+        - rid: 8331858578113822962
+    - rid: 8331858578113822943
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 1
+        m_NodeModel:
+          rid: 8331858578113822939
+        m_Connections:
+        - rid: 8331858578113822947
+    - rid: 8331858578113822944
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113822939
+        m_Connections:
+        - rid: 8331858578113822979
+    - rid: 8331858578113822945
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113822940
+        m_Connections:
+        - rid: 8331858578113822917
+    - rid: 8331858578113822946
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: True
+        m_PortDataFlowType: 1
+        m_IsFloating: 1
+        m_NodeModel:
+          rid: 8331858578113822940
+        m_Connections:
+        - rid: 8331858578113822941
+    - rid: 8331858578113822947
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: False
+        m_PortDataFlowType: 1
+        m_IsFloating: 1
+        m_NodeModel:
+          rid: 8331858578113822940
+        m_Connections:
+        - rid: 8331858578113822943
+    - rid: 8331858578113822961
+      type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -84.2, y: 693.3}
+        ID:
+          m_Value0: 11370472729849116460
+          m_Value1: 16758953500302965479
+        Parents: []
+        PortModels:
+        - rid: 8331858578113822962
+        - rid: 8331858578113822963
+        NodeType:
+          m_SerializableType: CitizenSim.SeekFoodAction, CitizenSim, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 9964204167558050465
+          m_Value1: 7807916014193937563
+        m_FieldValues: []
+    - rid: 8331858578113822962
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113822961
+        m_Connections:
+        - rid: 8331858578113822942
+    - rid: 8331858578113822963
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113822961
+        m_Connections: []
+    - rid: 8331858578113822972
+      type: {class: FloatingPortNodeModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        Position: {x: 417.39996, y: 822.69995}
+        ID:
+          m_Value0: 11650649191154610454
+          m_Value1: 16448436604242435255
+        Parents: []
+        PortModels:
+        - rid: 8331858578113822975
+        - rid: 8331858578113822976
+        ParentNodeID:
+          m_Value0: 17134546650062930692
+          m_Value1: 10339480107832761979
+        PortName: True
+        Metadata: 
+    - rid: 8331858578113822973
+      type: {class: FloatingPortNodeModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        Position: {x: 609.39996, y: 822.69995}
+        ID:
+          m_Value0: 6797502339163934740
+          m_Value1: 15904271823297734395
+        Parents: []
+        PortModels:
+        - rid: 8331858578113822977
+        - rid: 8331858578113822978
+        ParentNodeID:
+          m_Value0: 17134546650062930692
+          m_Value1: 10339480107832761979
+        PortName: False
+        Metadata: 
+    - rid: 8331858578113822974
+      type: {class: BranchingConditionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: 513.39996, y: 719.69995}
+        ID:
+          m_Value0: 17134546650062930692
+          m_Value1: 10339480107832761979
+        Parents: []
+        PortModels:
+        - rid: 8331858578113822979
+        - rid: 8331858578113822980
+        - rid: 8331858578113822981
+        NodeType:
+          m_SerializableType: Unity.Behavior.BranchingConditionComposite, Unity.Behavior,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 12334964803190848789
+          m_Value1: 14608808926743427008
+        m_FieldValues: []
+        <ConditionModels>k__BackingField:
+        - ConditionType:
+            m_SerializableType: CitizenSim.IsFatiguedCondition, CitizenSim, Version=0.0.0.0,
+              Culture=neutral, PublicKeyToken=null
+          ConditionTypeID:
+            m_Value0: 17573839321631836150
+            m_Value1: 12871843988449441188
+          NodeModel:
+            rid: 8331858578113822974
+          m_FieldValues: []
+          OperatorFieldModel:
+            rid: -2
+        <RequiresAllConditionsTrue>k__BackingField: 0
+        <ShouldTruncateNodeUI>k__BackingField: 0
+        <ObserverType>k__BackingField: 0
+    - rid: 8331858578113822975
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 1
+        m_NodeModel:
+          rid: 8331858578113822972
+        m_Connections:
+        - rid: 8331858578113822980
+    - rid: 8331858578113822976
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113822972
+        m_Connections:
+        - rid: 8331858578113823002
+    - rid: 8331858578113822977
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 1
+        m_NodeModel:
+          rid: 8331858578113822973
+        m_Connections:
+        - rid: 8331858578113822981
+    - rid: 8331858578113822978
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113822973
+        m_Connections:
+        - rid: 8331858578113823022
+    - rid: 8331858578113822979
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113822974
+        m_Connections:
+        - rid: 8331858578113822944
+    - rid: 8331858578113822980
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: True
+        m_PortDataFlowType: 1
+        m_IsFloating: 1
+        m_NodeModel:
+          rid: 8331858578113822974
+        m_Connections:
+        - rid: 8331858578113822975
+    - rid: 8331858578113822981
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: False
+        m_PortDataFlowType: 1
+        m_IsFloating: 1
+        m_NodeModel:
+          rid: 8331858578113822974
+        m_Connections:
+        - rid: 8331858578113822977
+    - rid: 8331858578113823001
+      type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: 136.59999, y: 914.89996}
+        ID:
+          m_Value0: 15155549619655612222
+          m_Value1: 219054863445627147
+        Parents: []
+        PortModels:
+        - rid: 8331858578113823002
+        - rid: 8331858578113823003
+        NodeType:
+          m_SerializableType: CitizenSim.SeekHomeAction, CitizenSim, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 15114284481868391892
+          m_Value1: 18007880358491911138
+        m_FieldValues: []
+    - rid: 8331858578113823002
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113823001
+        m_Connections:
+        - rid: 8331858578113822976
+    - rid: 8331858578113823003
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113823001
+        m_Connections: []
+    - rid: 8331858578113823015
+      type: {class: FloatingPortNodeModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        Position: {x: 743.7999, y: 1031.5}
+        ID:
+          m_Value0: 228101905285455306
+          m_Value1: 2431447745318291784
+        Parents: []
+        PortModels:
+        - rid: 8331858578113823018
+        - rid: 8331858578113823019
+        ParentNodeID:
+          m_Value0: 16523817292806414852
+          m_Value1: 12224643109823000632
+        PortName: True
+        Metadata: 
+    - rid: 8331858578113823016
+      type: {class: FloatingPortNodeModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        Position: {x: 935.7999, y: 1031.5}
+        ID:
+          m_Value0: 17774223731535633588
+          m_Value1: 17715888636795645823
+        Parents: []
+        PortModels:
+        - rid: 8331858578113823020
+        - rid: 8331858578113823021
+        ParentNodeID:
+          m_Value0: 16523817292806414852
+          m_Value1: 12224643109823000632
+        PortName: False
+        Metadata: 
+    - rid: 8331858578113823017
+      type: {class: BranchingConditionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: 839.7999, y: 928.49994}
+        ID:
+          m_Value0: 16523817292806414852
+          m_Value1: 12224643109823000632
+        Parents: []
+        PortModels:
+        - rid: 8331858578113823022
+        - rid: 8331858578113823023
+        - rid: 8331858578113823024
+        NodeType:
+          m_SerializableType: Unity.Behavior.BranchingConditionComposite, Unity.Behavior,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 12334964803190848789
+          m_Value1: 14608808926743427008
+        m_FieldValues: []
+        <ConditionModels>k__BackingField:
+        - ConditionType:
+            m_SerializableType: CitizenSim.IsBoredCondition, CitizenSim, Version=0.0.0.0,
+              Culture=neutral, PublicKeyToken=null
+          ConditionTypeID:
+            m_Value0: 11886093232070305863
+            m_Value1: 14101511477975828149
+          NodeModel:
+            rid: 8331858578113823017
+          m_FieldValues: []
+          OperatorFieldModel:
+            rid: -2
+        <RequiresAllConditionsTrue>k__BackingField: 0
+        <ShouldTruncateNodeUI>k__BackingField: 0
+        <ObserverType>k__BackingField: 0
+    - rid: 8331858578113823018
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 1
+        m_NodeModel:
+          rid: 8331858578113823015
+        m_Connections:
+        - rid: 8331858578113823023
+    - rid: 8331858578113823019
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113823015
+        m_Connections:
+        - rid: 8331858578113823051
+    - rid: 8331858578113823020
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 1
+        m_NodeModel:
+          rid: 8331858578113823016
+        m_Connections:
+        - rid: 8331858578113823024
+    - rid: 8331858578113823021
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113823016
+        m_Connections:
+        - rid: 8331858578113823068
+    - rid: 8331858578113823022
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113823017
+        m_Connections:
+        - rid: 8331858578113822978
+    - rid: 8331858578113823023
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: True
+        m_PortDataFlowType: 1
+        m_IsFloating: 1
+        m_NodeModel:
+          rid: 8331858578113823017
+        m_Connections:
+        - rid: 8331858578113823018
+    - rid: 8331858578113823024
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: False
+        m_PortDataFlowType: 1
+        m_IsFloating: 1
+        m_NodeModel:
+          rid: 8331858578113823017
+        m_Connections:
+        - rid: 8331858578113823020
+    - rid: 8331858578113823050
+      type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: 479.3689, y: 1172.6296}
+        ID:
+          m_Value0: 18098816165614121370
+          m_Value1: 3879000099078280848
+        Parents: []
+        PortModels:
+        - rid: 8331858578113823051
+        - rid: 8331858578113823052
+        NodeType:
+          m_SerializableType: CitizenSim.SeekFunAction, CitizenSim, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 16344056426329011941
+          m_Value1: 11599558328718828787
+        m_FieldValues: []
+    - rid: 8331858578113823051
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113823050
+        m_Connections:
+        - rid: 8331858578113823019
+    - rid: 8331858578113823052
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113823050
+        m_Connections: []
+    - rid: 8331858578113823067
+      type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: 1017.77, y: 1178.7838}
+        ID:
+          m_Value0: 16413840592244385954
+          m_Value1: 355021810744730529
+        Parents: []
+        PortModels:
+        - rid: 8331858578113823068
+        - rid: 8331858578113823069
+        NodeType:
+          m_SerializableType: CitizenSim.WanderAction, CitizenSim, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 13378021818847511474
+          m_Value1: 15548314483614208448
+        m_FieldValues: []
+    - rid: 8331858578113823068
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113823067
+        m_Connections:
+        - rid: 8331858578113823021
+    - rid: 8331858578113823069
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8331858578113823067
+        m_Connections: []
+--- !u!114 &4991551357545470339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c02bb70996b49eba31d0c206e28da24, type: 3}
+  m_Name: CitizenBehavior2 Blackboard
+  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.RuntimeBlackboardAsset
+  VersionTimestamp: 639198386606499738
+  AssetID:
+    m_Value0: 0
+    m_Value1: 0
+  m_Blackboard:
+    m_Variables:
+    - rid: 5229531665127440402
+  m_SharedBlackboardVariableGuids: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5229531665127440402
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        m_Value: {fileID: 0}
+--- !u!114 &7847099178043054344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b27bb6d9a2c8d540a10dff10acc543e, type: 3}
+  m_Name: CitizenBehavior2 Debug Info
+  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphDebugInfo
+  m_CodeBreakPointsList: []
